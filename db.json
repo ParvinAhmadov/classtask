@@ -4,25 +4,41 @@
         "id": 1,
         "name": "Juliet ",
         "number": "08100000000",
-        "surname":"Oma"
+        "surname":"Oma",
+        "cardNumber":"1234 5678 9012 3456",
+        "Type":"Type A",
+        "Invoice":"INV-001"
       },
       {
         "id": 2,
         "name": "James ",
         "surname":"Williams",
-        "number": "08111111111"
+        "number": "08111111111",
+        "cardNumber":"9876 5432 1098 7654",
+        "Type":"Type B",
+        "Invoice":"INV-002"
+
+        
       },
       {
         "id": 3,
         "name": "Ahmed ",
         "surname":"Ali",
-        "number": "09022222222"
+        "number": "09022222222",
+        "cardNumber":"1234 1245 9012 5645",
+        "Type":"Type C",
+        "Invoice":"INV-003"
+
       },
       {
         "id": 4,
         "name": "Grace",
         "number": "09033333333",
-        "surname":"Funsho"
+        "surname":"Funsho",
+        "cardNumber":"1234 4578 1275 9635",
+        "Type":"Type D",
+        "Invoice":"INV-004"
+
       }
     ]
   }
