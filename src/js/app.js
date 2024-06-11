@@ -1,22 +1,24 @@
 const asyncGetCall = async () => {
-  
-        const response = await fetch('http://localhost:8080/users');
-         const data = await response.json();
-         console.log(data);
-     
-    }
+  try {
+    const response = await fetch("http://localhost:8080/users");
+    const data = await response.json();
+    data.forEach((user) => {
+      document.querySelector("tbody").innerHTML += `
+                <tr>
+                
+                    <td>${user.id}</td>
+                    <td>${user.name}</td>
+                    <td>${user.surname}</td>
+                    <td>${user.Type}</td>
+                    <td>${user.Invoice}</td>
+                    <td>${user.cardNumber} </td>
+                    
+                    
+                </tr>`;
+    });
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
 
-
-  asyncGetCall();
-  fetch("http://localhost:8080/users")
-  then((res)=> res.json())
-  then((data)=>{
-    document.querySelector("tbody").innerHTML+=`<tr>
-    <td>12354</td>
-    <td>sdadsa</td>
-    <td>dsad</td>
-    <td>pervin</td>
-    <td>ehmedov</td>
-    <td>025</td>
-</tr>`
-  })
+asyncGetCall();
